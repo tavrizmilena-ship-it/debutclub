@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DÉBUT Community</title>
+  <meta name="description" content="DÉBUT Community — немного больше, чем просто английский. Интерактивная презентация DÉBUT Closed Club.">
+  <meta name="theme-color" content="#0d1d2c">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="icon" href="assets/logo/debut-fluffy-sm.webp?v=5">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/logo/debut-fluffy.webp?v=5">
+  <link rel="stylesheet" href="css/styles.css?v=5">
+</head>
+<body class="is-loading">
+  <a class="skip" href="#room">Перейти к содержанию</a>
+
+  <!-- persistent chrome -->
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <a class="brand" href="#hero" data-goto="hero" aria-label="В начало">
+    <img src="assets/logo/debut-fluffy-sm.webp?v=5" alt="" width="120" height="45">
+  </a>
+  <nav class="dots" aria-label="Разделы"></nav>
+  <div class="chip-now" aria-live="polite"><span class="chip-now__n">00</span><span class="chip-now__l">Добро пожаловать</span></div>
+  <div class="controls">
+    <button class="ctl" data-action="prev" aria-label="Предыдущий раздел" title="Предыдущий раздел (←)"><svg viewBox="0 0 24 24"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <button class="ctl" data-action="next" aria-label="Следующий раздел" title="Следующий раздел (→)"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <button class="ctl" data-action="present" aria-pressed="false" aria-label="Режим презентации" title="Режим презентации (P)"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 21h6M12 17v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    <button class="ctl" data-action="fullscreen" aria-label="Полный экран" title="Полный экран (F)"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <button class="ctl" data-action="help" aria-label="Горячие клавиши" title="Горячие клавиши (?)">?</button>
+  </div>
+
+  <main id="app"></main>
+
+  <div class="help" role="dialog" aria-modal="true" aria-labelledby="help-title" hidden>
+    <div class="help__card glass">
+      <h2 id="help-title">Управление для спикеров</h2>
+      <dl>
+        <dt>↓ / Пробел / PgDn</dt><dd>Следующий шаг (длинный раздел сначала прокручивается)</dd>
+        <dt>↑ / PgUp</dt><dd>Предыдущий шаг</dd>
+        <dt>→ / ←</dt><dd>Следующий / предыдущий раздел</dd>
+        <dt>0–9</dt><dd>Перейти к разделу 00–09 (Shift+0 → 10, Shift+1 → 11, Shift+2 → 12)</dd>
+        <dt>Home / End</dt><dd>В начало / к вопросам</dd>
+        <dt>P</dt><dd>Режим презентации (скрыть навигацию)</dd>
+        <dt>F</dt><dd>Полный экран</dd>
+        <dt>Esc</dt><dd>Закрыть подсказку или открытое изображение</dd>
+      </dl>
+      <button class="btn" data-action="help-close">Понятно</button>
+    </div>
+  </div>
+
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр изображения" hidden>
+    <button class="lightbox__close" aria-label="Закрыть">×</button>
+    <img alt="">
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <script src="vendor/gsap.min.js"></script>
+  <script src="vendor/ScrollTrigger.min.js"></script>
+  <script src="vendor/lenis.min.js"></script>
+  <script src="js/content.js?v=5"></script>
+  <script src="js/scene.js?v=5"></script>
+  <script src="js/render.js?v=5"></script>
+  <script src="js/sky.js?v=5"></script>
+  <script src="js/motion.js?v=5"></script>
+  <script src="js/nav.js?v=5"></script>
+</body>
+</html>
